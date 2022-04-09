@@ -12,7 +12,7 @@ public class ConnectionProvider {
 	public static Connection getCon()  throws SQLException, ClassNotFoundException{
 		try{
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/blood_mng","root","ratTrap@0");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/blood_mng","root","root");
 			System.out.println("Database connected!");
 			return con;
 		}
@@ -24,33 +24,5 @@ public class ConnectionProvider {
 	}
 }
 
-//import java.sql.*;
-//import java.util.*;
-//import javax.swing.*;
-//
-//public class ConnectionProvider extends javax.swing.JFrame{
-//	private Connection con;
-//
-//	public ConnectionProvider() throws SQLException{				
-//			
-//			try{
-//			Class.forName("com.mysql.cj.jdbc.Driver");		//Use either this with classnotfound exception or the other format given below without the classnotfound exception! 
-//			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/blood_mng","root","ratTrap@0");
-//		    
-////			Statement stm = con.createStatement();
-////			String query = "insert into bloodrequest values('Khushi','9340876314','k@gmail.com','O+','pending')";
-////			stm.executeUpdate(query);
-//			
-////			stm.close();
-//			con.close();
-//		
-//			}catch(SQLException e){
-//				e.printStackTrace();
-//			} catch (ClassNotFoundException e) {
-//				// TODO Auto-generated catch block
-//				System.out.println("Driver not found !");
-//				e.printStackTrace();
-//			}
-//	}
-//}
+
 
